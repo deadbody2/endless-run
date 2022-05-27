@@ -25,10 +25,22 @@ p {
   color: white;
 }
 </style>
+<link rel="stylesheet" href="https://unpkg.com/leopard@^1/dist/index.min.css"/>
+</head>
 <body>
 <h1>endless run</h1>
 <p>a game my friend thought of</p>
-<iframe src="https://scratch.mit.edu/projects/697603730/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<button id="greenFlag">Green Flag</button>
+<div id="project"></div>
+<script type="module">
+import project from "./index.js";
+project.attach("#project");
+document.querySelector("#greenFlag").addEventListener("click", () => {
+project.greenFlag();
+});
+project.greenFlag();
+</script>
+<h2>controls</h2>
 <p>1 = red 2 = blue</p>
 <h2>credits</h2>
 <p><a href="https://github.com/deadbody2">Me</a><p>Code</p>
